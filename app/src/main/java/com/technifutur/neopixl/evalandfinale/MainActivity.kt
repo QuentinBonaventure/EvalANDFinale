@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             when(destination.id){
                 R.id.searchMovieFragment -> binding.bottomNavigationView.visibility = View.VISIBLE
                 R.id.topRatedMoviesFragment -> binding.bottomNavigationView.visibility = View.VISIBLE
-                R.id.detailMovieFragment -> binding.bottomNavigationView.visibility = View.GONE
+                R.id.detailMovieFragment -> binding.bottomNavigationView.visibility = View.VISIBLE
             }
         }
         var bottomNavigationView = binding.bottomNavigationView
