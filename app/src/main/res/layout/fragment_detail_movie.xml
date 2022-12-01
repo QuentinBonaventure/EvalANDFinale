@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.DetailMovieFragment">
+
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@id/movieBackImageCardView"
+        app:layout_constraintStart_toStartOf="@id/movieBackImageCardView"
+        android:layout_marginBottom="-24dp"
+        android:id="@+id/movieRating"
+        android:elevation="@dimen/car_ui_padding_5"
+        android:layout_marginStart="300dp"
+        android:textColor="@color/black"
+        android:paddingTop="16dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="8.2"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_border"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/movieBackImageCardView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/movieBackImageCardView"
+            app:layout_constraintStart_toStartOf="@id/movieBackImageCardView"
+            android:id="@+id/backButton"
+            android:text="Back"
+            android:backgroundTint="#00000000"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/movieBackImage"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/movieImageCardView"
+        android:layout_width="90dp"
+        android:layout_height="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieBackImageCardView"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="18dp"
+            android:layout_margin="4dp"
+            >
+            <ImageView
+                android:id="@+id/movieImage"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/movieImageCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Synopsis"
+        android:id="@+id/synopsis"
+        android:textStyle="bold"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        />
+    <ScrollView
+        android:id="@+id/synopsisScroll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/synopsis"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movieSynopsis"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="36dp"
+            tools:text="Coucou c'est moi quentin , je suis dev mobile en devenir , motivé passioné."/>
+    </ScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/synopsisScroll"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/similarMovie"
+        android:text="Similar Movies"
+        android:textStyle="bold"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/movieTitle"
+        android:text="Batman Begins "
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/movieImageCardView"
+        app:layout_constraintTop_toBottomOf="@id/movieBackImageCardView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/similarMovie"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/similarMovieRecyclerView"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginHorizontal="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
