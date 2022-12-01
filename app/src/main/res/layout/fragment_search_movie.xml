@@ -54,7 +54,7 @@
         android:layout_height="700dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="60dp"
-        android:background="@drawable/background_search"
+        android:background="@drawable/backgoundsearch"
         app:layout_constraintStart_toStartOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
