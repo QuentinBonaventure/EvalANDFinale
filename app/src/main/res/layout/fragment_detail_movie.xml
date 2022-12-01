@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@id/movieBackImageCardView"
         app:cardCornerRadius="20dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="-40dp"
         >
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -79,6 +79,7 @@
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
 
                 />
         </androidx.cardview.widget.CardView>
