@@ -31,6 +31,7 @@ class SearchMovieAdapter(private val movies: List<Movie>, val listener: ClickLis
         fun bind(movie: Movie, listener: ClickListener){
             binding.movieTitle.text = movie.title
             binding.movieReleaseDate.text = movie.releaseDate
+            binding.movieRating.text = movie.voteAverage.toString()
 
             if(!movie.posterPath.isNullOrEmpty()){
                 val imageURL = "https://image.tmdb.org/t/p/w500${movie.posterPath}"
